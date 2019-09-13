@@ -25,3 +25,64 @@ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON
 ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
 (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
 SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+Cau 1: Object trong JavaScript là gì? Chúng ta tao ta chúng nhu nào?
+  lua giá tri bao gom key=> value
+  vi du: var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
+  
+Cau 2: what is scope in js (pham vi bien)
+	- global scope and local scope
+Câu 3:What is this in JavaScript? (this trong JavaScript là gì?)
+	this: tro den nhung bien trong objects
+	this: su dung trong ham apply or call 
+	vidu: 
+	var person1 ={
+	
+	}
+	
+cau 4: Thu?c tính prototype trong JavaScript là gì?
+	them thuojc tinh vao object
+	
+	Person.prototype.nationality = "English";
+	
+cau 5: Closure trong JavaScript là gì?: 
+	taoj 1 function ben trong 1 function khac(B), cho phep B ke thua nhung thuoc tinh cua function cha.
+cau 7 :Hàm anonymous là gì và khi nào nên s? d?ng nó?
+	- ham ko ten
+	vd: var test = function(){
+	
+	}
+Câu 8: What is the difference between “==” and “===”?
+  - ==: so sanh gia tri
+  - ===: so sanh gia tri va kieu
+Cau 9: cac kieu du lieu trong javascript:
+  - var
+  - let
+  - const.
+  
+cau 13: Cac cac khai bao 1 array() khac nhau
+  let a = array();
+  let a = [];
+
+cau 15: phuong thuc them 1 hoac nhieu phan tu moi vao mang
+  a.append("")
+  
+Câu 17: B?n s? t?o ra m?t Cookie s? d?ng JavaScript nhu th? nào?
+// Hàm thi?t l?p Cookie
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + "; " + expires;
+}
+ 
+// Hàm l?y Cookie
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) == 0) return c.substring(name.length, c.length);
+    }
+    return "";
+}
